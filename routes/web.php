@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\User\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,12 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (){
     return view('home');
-});
+}) -> name('home');
 
-Route::prefix('/admin') -> group(function () {
-    Route::get('/' , [AdminController::class, 'index']);
-});
+Route::get('/login', [UserController::class, 'getLogin']) -> name('login');
+Route::post('/login', [UserController::class, 'setLogin']);
+Route::get('/register', [UserController::class, 'getRegister']) -> name('register');
+Route::post('/register', [UserController::class, 'setRegister']);
+Route::get('/contact', [UserController::class, 'contact'])->name('contact');

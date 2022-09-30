@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Azpet Shop | Home  </title>
     <link rel="">
+    <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
@@ -20,20 +22,19 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li><a href="#" class="nav-link px-4 text-white home_menu">Home</a></li>
-                  <li><a href="#" class="nav-link px-4 text-white">Blog</a></li>
-                  <li><a href="#" class="nav-link px-4 text-white">Đặt câu hỏi</a></li>
-                  <li><a href="#" class="nav-link px-4 text-white">Liên hệ</a></li>
+                  <li><a href="{{route('home')}}" class="nav-link px-4 text-white home_menu">Home</a></li>
+                  <li><a href="{{route('contact')}}" class="nav-link px-4 text-white">Liên hệ</a></li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex" role="search">
                   <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-                  <button type="button" class="btn btn-primary ">Search</button>
+                  <button type="button" class="btn btn-primary "><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
                 <div class="text-end">
 
-                  <button type="button" class="btn btn-warning">Log in</button>
+                    <button type="button" class="btn btn-info"><a href="{{route('login')}}">Đăng nhập</a></button>
+                    <button type="button" class="btn btn-warning"><a href="{{route('register')}}">Đăng ký</a></button>
                 </div>
               </div>
             </div>
@@ -49,7 +50,7 @@
                         <h1>Bạn có muốn sở hữu 1 chú pet dễ thương</h1>
                     </div>
                     <div class="col-8">
-                        <img src="{{asset('assets/image/img2.png')}}">
+{{--                        <img src="{{asset('assets/image/img1.jpeg')}}">--}}
 
                     </div>
                 </div>

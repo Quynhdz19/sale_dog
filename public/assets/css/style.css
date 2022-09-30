@@ -1,5 +1,10 @@
 body {
     font-size: 18px;
+
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 .text-bg-dark {
     background: RGBA(33,37,41);
