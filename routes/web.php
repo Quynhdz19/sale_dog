@@ -24,3 +24,4 @@ Route::post('/login', [UserController::class, 'setLogin']);
 Route::get('/register', [UserController::class, 'getRegister']) -> name('register');
 Route::post('/register', [UserController::class, 'setRegister']);
 Route::get('/contact', [UserController::class, 'contact'])->name('contact');
+Route::get('/forgotPassword', [UserController::class, 'forgotPassword'])->name('forgot');

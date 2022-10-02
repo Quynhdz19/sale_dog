@@ -48,4 +48,7 @@ class UserController extends Controller
     public function contact() {
         return view('layouts.contact');
     }
+    public function forgotPassword() {
+        return view('layouts.forgotPassword');
+    }
 }

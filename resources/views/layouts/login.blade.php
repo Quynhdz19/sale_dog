@@ -43,6 +43,8 @@
 
         <div class="link">Bạn chưa có tài khoản? <a href="{{route('register')}}">Đăng ký ngay</a></div>
         <a class="back_home" href="{{route('home')}}">Trang chủ</a>
+        <a class="back_home forgot_password" href="{{route('forgot')}}">Quên mật khẩu</a>
+
     </section>
 
 </div>
