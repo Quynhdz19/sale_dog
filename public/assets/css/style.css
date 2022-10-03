@@ -60,3 +60,10 @@ a {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
+.card {
+    cursor: pointer;
+}
+
+.sidebar {
+    border-right: 1px solid #cccccc;
+}

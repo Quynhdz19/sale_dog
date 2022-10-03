@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
+
 </head>
 <body>
     <div>
@@ -35,6 +36,8 @@
 
                     <button type="button" class="btn btn-info"><a href="{{route('login')}}">Đăng nhập</a></button>
                     <button type="button" class="btn btn-warning"><a href="{{route('register')}}">Đăng ký</a></button>
+                    <a class="btn btn-primary"><i class="fa-regular fa-cart-shopping"></i></a>
+
                 </div>
               </div>
             </div>
@@ -47,7 +50,7 @@
               <div class="carousel-item active" data-bs-interval="10000">
                 <div class="row text-center">
                     <div class="col-4">
-                        <h1>Bạn có muốn sở hữu 1 chú pet dễ thương</h1>
+                        <h1>Sidbar 1</h1>
                     </div>
                     <div class="col-8">
 {{--                        <img src="{{asset('assets/image/img1.jpeg')}}">--}}
@@ -92,15 +95,12 @@
 
     <main>
 
-        <section class="py-5 text-center container">
+        <section class="py-1 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Album example</h1>
-                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-                    </p>
+                    <h1 class="fw-light">Sản phẩm nổi bật </h1>
+                    <p class="lead text-muted"> Sản phẩm nổi bật </p>
+
                 </div>
             </div>
         </section>

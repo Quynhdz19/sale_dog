@@ -15,13 +15,19 @@ use App\Http\Controllers\User\UserController;
 |
 */
 
-Route::get('/', function (){
+Route::get('/Home', function (){
     return view('home');
 }) -> name('home');
+Route::prefix('user') -> group(function () {
+    Route::get('/login', [UserController::class, 'getLogin']) -> name('login');
+    Route::post('/login', [UserController::class, 'setLogin']);
+    Route::get('/register', [UserController::class, 'getRegister']) -> name('register');
+    Route::post('/register', [UserController::class, 'setRegister']);
+    Route::get('/contact', [UserController::class, 'contact'])->name('contact');
+    Route::get('/forgotPassword', [UserController::class, 'forgotPassword'])->name('forgot');
 
-Route::get('/login', [UserController::class, 'getLogin']) -> name('login');
-Route::post('/login', [UserController::class, 'setLogin']);
-Route::get('/register', [UserController::class, 'getRegister']) -> name('register');
-Route::post('/register', [UserController::class, 'setRegister']);
-Route::get('/contact', [UserController::class, 'contact'])->name('contact');
-Route::get('/forgotPassword', [UserController::class, 'forgotPassword'])->name('forgot');
+});
+Route::prefix('admin') -> group(function () {
+    Route::get('/', [AdminController::class, 'index']) -> name('HomeAdmin');
+});
+
