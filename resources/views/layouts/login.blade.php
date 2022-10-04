@@ -52,4 +52,4 @@
 
 </body>
 </html>
-@extends('layouts.footer')
+

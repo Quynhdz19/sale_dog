@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\ImageUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,11 @@ Route::prefix('admin') -> group(function () {
     Route::get('/', [AdminController::class, 'index']) -> name('HomeAdmin');
 });
 
+Route::get('/add-image',[ImageUploadController::class,'addImage'])->name('images.add');
+
+//For storing an image
+Route::post('/store-image',[ImageUploadController::class,'storeImage'])
+    ->name('images.store');
+
+//For showing an image
+Route::get('/view-image',[ImageUploadController::class,'viewImage'])->name('images.view');
